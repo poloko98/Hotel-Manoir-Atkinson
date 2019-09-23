@@ -160,7 +160,7 @@ h6 {
     z-index: 1500;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(90%);
+    transform: translateX(-50%) translateY(50%);
     font-size: 2em;
 }
 
@@ -205,13 +205,13 @@ h6 {
 
 .btn--reserva {
     border-radius: 15px;
-    -webkit-transition:  all .3s ease;
+    -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
-    transition:  all .3s ease;
+    transition: all .3s ease;
 }
 
 .btn--reserva:hover {
-    transform:  scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
 
 .group__title {
@@ -374,7 +374,7 @@ h6 {
     }
 }
 
-@media screen and (min-width:840px){
+@media screen and (min-width:840px) {
     .icon-menu {
         display: none;
     }
@@ -408,8 +408,7 @@ h6 {
         padding: 10px;
     }
 
-    .main-header__contactInfo__phone,
-    main-header__contactInfo__address {
+    .main-header__contactInfo__phone {
         padding-right: 0;
         font-size: 1.155em;
     }
@@ -425,8 +424,6 @@ h6 {
     .banner__content {
         font-size: 2.5em;
     }
-
-
 
     .group--color .container {
         margin-top: 30px;
@@ -537,7 +534,7 @@ h6 {
     .us__img {
         height: 500px;
         width: 400px;
-        transform: translateX(35%);
+        transform: translateX(15%);
     }
 
     .about-us {
@@ -549,16 +546,7 @@ h6 {
     }
 
 }
-/*--------------------------------------Estilo Contacto----------------------------------------------*/
 
-.btn--contacto{
-    background-color:rgba(80, 50, 100);
-    border-radius: 5px;
-}
-
-.btn--contacto:hover{
-    background: #222;
-}
 /*-----------------------------------------Slider-----------------------------------------*/
 
 .tslider {
@@ -572,7 +560,7 @@ h6 {
     min-height: 780px;
 }
 
-.button{
+.button {
     color: #ddd;
     background: rgba(82, 20, 100);
     font-size: 30px;
@@ -584,36 +572,32 @@ h6 {
     border-radius: 50%;
     text-align: center;
     position: absolute;
-    -webkit-transition:  all .3s ease;
+    -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
-    transition:  all .3s ease;
+    transition: all .3s ease;
 }
 
 
-.button:hover{
+.button:hover {
     cursor: pointer;
-    transform:  scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
-.prev{
+
+.prev {
     left: 2%;
-    top: calc(50%-70px);
+    top: calc(50% - 70px);
 }
-.next{
-    
+
+.next {
+
     right: 2%;
-    top: calc(50%-70px);
-    
+    top: calc(50% - 70px);
+
 }
 
-/*------------------------------------------------Responsive slider.----------------------------------------------------------*/
-
-@media screen and (min-width:1024px) {
-
-   
-}
 
 /* --------------------------Galeria----------------------------------------- */
-.gallery__img{
+.gallery__img {
     object-fit: cover;
     margin-bottom: 10px;
     cursor: pointer;
@@ -663,19 +647,19 @@ h6 {
     font-weight: bold;
     width: 50px;
     height: 50px;
-    line-height: 50px; 
+    line-height: 50px;
     background: rgba(82, 20, 100);
     border-radius: 50%;
     text-align: center;
     font-size: 1.5em;
-    -webkit-transition:  all .3s ease;
+    -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
-    transition:  all .3s ease;
+    transition: all .3s ease;
 }
 
-.modal__boton:hover{
+.modal__boton:hover {
     cursor: pointer;
-    transform:  scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
 
 .modal__open {
@@ -683,43 +667,78 @@ h6 {
 }
 
 /*------------------------Formulario------------------------*/
-.formulario{
-    position: relative;
+.formulario {
+    display: flex;
+    background: rgba(82, 20, 100, 0.87);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
 }
-.formulario__input,.formulario__label{
+
+.btn--contacto {
+    background-color: rgba(80, 50, 100);
+    border-radius: 5px;
+    margin-bottom: -5px;
+}
+
+.btn--contacto:hover {
+    background: #222;
+}
+
+.formulario__input,
+.formulario__label {
     display: inline;
-    
+
 }
 
-.formulario__input{
-    padding:6px;
-    background:rgb(255, 255, 255);
-
-    border: 1px solid rgb(0, 0, 0)
-}
-.formulario__input:focus{
-    outline: 1px  solid rgb(17, 195, 218)
+.formulario__input {
+    padding: 6px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
 }
 
+.formulario__input:focus {
+    outline: 1px solid rgb(17, 195, 218);
+}
 
+#mensaje {
+    width: 100%;
+    margin-bottom: -5px;
+    box-sizing: border-box;
+}
 
+#nombre {
+    width: 50%;
+    margin-bottom: 20px;
+}
 
+#mail {
+    width: 50%;
+    margin-bottom: 20px;
+}
 
+#telefono {
+    width: 50%;
+    margin-bottom: 20px;
+}
 
+#mapa {
+    width: 100%;
+}
 
+.contacto {
+    width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width:1024px) {
+    .formulario {
+        width: 50%;
+    }
+}

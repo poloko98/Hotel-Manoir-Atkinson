@@ -44,12 +44,3 @@ function validarForm(){
         alert("Correo no valido");
     }
 }
-
-/*function validarFecha(){
-    var hoy =new Date();
-    var fecha= document.getElementById("fecha").value;
-
-    if(fecha>hoy){
-        alert("No puede seleccionar una fecha anterior")
-    }
-}*/

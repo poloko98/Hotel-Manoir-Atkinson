@@ -36,24 +36,33 @@
     </section>
     <!--Comienzo del main!-->
     <main class="main">
+        
         <section class="group group--color">
             <div class="container">
-                <h2 class="main__title">Rellena con tus datos!</h2>
-                <p class="main__text">Rellena los siguientes campos con los datos solicitados para contactarte con
-                    nosotros!</p>
+                <h2 class="main__title">Encuentranos Aqui! HELLOW!</h2>
             </div>
         </section>
+        <div class="group">
+            <div class="container container--flex">    
+                <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295.6163870779195!2d-71.6257910595959!3d-33.04283664204103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689dde3de20cec7%3A0x5502d1bf0686c3b4!2sHotel%20Manoir%20Atkinson!5e0!3m2!1ses!2scl!4v1568206209794!5m2!1ses!2scl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div>            
+        </div>
+        <section class="group group--color contacto">
+                <div class="container">
+                    <h2 class="main__title"> Contactanos!</h2>
+                    <p class="main__text">Rellena aqui con tus datos y dejanos tu mensaje!</p>
+                </div>
+        </section>
         <!--Formulario!-->
-        <section class="group group--color formulario">
+        <section class="formulario">
+            <h2> </h2>
             <form action="" method="post"  onsubmit="return validarForm();">
-            <div class="container">
+            <div class="">
                 <input type="text" class="formulario__input" id="nombre" name="nombre" placeholder="Ingrese Nombre" class="input-48" onchange="validarNombre()" required >
                 <input type="email" class="formulario__input" id="mail" name="mail" placeholder="Ingrese email"
                 onchange="validarCorreo()" required>
                 <input type="text" class="formulario__input" id="telefono" name="telefono"
                     placeholder="+56 9 xxxxxxx" class="input-48" onchange="validarTelefono()" required>
-                <input type="date" class="formulario__input" id="fecha" name="fecha" class="input-48" onchange="validarFecha()" required>
-                <hr>
                 <textarea name="mensaje" class="formulario__input" id="mensaje" name="mensaje" cols="100"
                     rows="5"></textarea>
                 <input type="submit" class="btn btn--contacto" value="Contactenos!"> 
