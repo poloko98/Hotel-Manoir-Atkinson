@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,8 +7,8 @@
     <title>Hotel Atkinson Manior</title>
     <meta name="viewport"
         content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
     </nav>
     <!--Banner!-->
     <div class="banner">
-        <img src="img/img1.jpg" alt="" class="banner_img">
+        <img src="{% static 'img/img1.jpg' %}" alt="" class="banner_img">
         <div class="banner__content">Vive una experiencia unica, en un grato ambiente familiar.</div>
     </div>
     <!--Comienzo del main!-->
@@ -53,7 +54,7 @@
            <div class="next button">
                &#62;
            </div>
-           <img class="img__slider" name="auto" src="img/slider1.jpg" alt="slider 1"  >
+           <img class="img__slider" name="auto" src="{% static 'img/slider1.jpg' %}" alt="slider 1"  >
         </div>
     </div>
         <!--Seccion final!-->
@@ -61,22 +62,22 @@
             <h2 class="group__title">Nuestras recomendaciones!</h2>
             <div class="container container--flex">
                 <div class="column column--50-25">
-                    <img src="img/img3.jpg" alt="" class="today-special__img">
+                    <img src="{% static 'img/img3.jpg' %}" alt="" class="today-special__img">
                     <div class="today-special__title">Cuarto Número 1</div>
                     <div class="today-special__price">$99</div>
                 </div>
                 <div class="column column--50-25">
-                    <img src="img/img4.jpg" alt="" class="today-special__img">
+                    <img src="{% static 'img/img4.jpg' %}" alt="" class="today-special__img">
                     <div class="today-special__title">Cuarto Número 2</div>
                     <div class="today-special__price">$99</div>
                 </div>
                 <div class="column column--50-25">
-                    <img src="img/img5.jpg" alt="" class="today-special__img">
+                    <img src="{% static 'img/img5.jpg' %}" alt="" class="today-special__img">
                     <div class="today-special__title">Cuarto Número 3</div>
                     <div class="today-special__price">$99</div>
                 </div>
                 <div class="column column--50-25">
-                    <img src="img/img6.jpg" alt="" class="today-special__img">
+                    <img src="{% static 'img/img6.jpg' %}" alt="" class="today-special__img">
                     <div class="today-special__title">Cuarto Número 4</div>
                     <div class="today-special__price">$99</div>
                 </div>
@@ -106,8 +107,8 @@
             <p class="copy">2019 Hotel Atkinson Manior ! Todos los derechos resevados</p>
         </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/carrousel.js"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/carrousel.js' %}"></script>
 </body>
 
 </html>
