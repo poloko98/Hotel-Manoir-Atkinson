@@ -18,3 +18,11 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class Reserva(models.Model):
+    email = models.EmailField()
+    nombre = models.CharField(max_length=100)
+    comentario = models.TextField()
+    telefono = models.IntegerField()
+    fecha_inicio = models.DateField()
+    fecha_fin = models.DateField()
+    num_personas = models.IntegerField()
