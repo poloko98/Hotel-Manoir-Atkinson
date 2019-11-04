@@ -26,3 +26,5 @@ class Reserva(models.Model):
     fecha_inicio = models.DateField()
     fecha_fin = models.DateField()
     num_personas = models.IntegerField()
+    def __str__(self):
+        return self.fecha_inicio.__str__()+' / '+self.fecha_fin.__str__()+' '+self.nombre
