@@ -45,6 +45,12 @@
                     necessitatibus ratione minus! Non pariatur, commodi porro rem!</p>
             </div>
         </section>
+        {% for Reserva in Reservas %}
+            <div>
+                <p> publicado: {{ Reserva.email }}</p>
+                
+            </div>
+        {% endfor %}
        <!--Slider!-->
        <div class="group slider">
         <div class="tslider container container--flex">
