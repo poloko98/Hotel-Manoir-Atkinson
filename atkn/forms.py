@@ -1,4 +1,5 @@
 from django import forms
+from models import Reserva
 
 class Contact(forms.Form):
     from_email = forms.EmailField(required=True)
