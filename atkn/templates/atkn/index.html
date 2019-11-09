@@ -43,14 +43,15 @@
                 <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit non ullam quia
                     repudiandae nam voluptatibus, quos pariatur doloribus consequatur molestias, eius libero
                     necessitatibus ratione minus! Non pariatur, commodi porro rem!</p>
+                    {% for Reserva in reservas %}
+                        <div>
+                            <p> publicado: {{ Reserva.email }}</p>
+                            
+                        </div> 
+                    {% endfor %}
             </div>
         </section>
-        {% for Reserva in Reservas %}
-            <div>
-                <p> publicado: {{ Reserva.email }}</p>
-                
-            </div>
-        {% endfor %}
+        
        <!--Slider!-->
        <div class="group slider">
         <div class="tslider container container--flex">

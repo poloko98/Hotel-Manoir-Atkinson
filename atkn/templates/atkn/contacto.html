@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,7 +7,7 @@
     <title>Hotel Atkinson Manior</title>
     <meta name="viewport"
         content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     <link rel="stylesheet" href="css/fontello.css">
 </head>
 
@@ -45,17 +46,10 @@
         </section>
         <!--Formulario!-->
         <section class="group group--color formulario">
-            <form action="" method="post"  onsubmit="return validarForm();">
+            <form action="" method="POST"  onsubmit="return validarForm();">
             <div class="container">
-                <input type="text" class="formulario__input" id="nombre" name="nombre" placeholder="Ingrese Nombre" class="input-48" onchange="validarNombre()" required >
-                <input type="email" class="formulario__input" id="mail" name="mail" placeholder="Ingrese email"
-                onchange="validarCorreo()" required>
-                <input type="text" class="formulario__input" id="telefono" name="telefono"
-                    placeholder="+56 9 xxxxxxx" class="input-48" onchange="validarTelefono()" required>
-                <input type="date" class="formulario__input" id="fecha" name="fecha" class="input-48" onchange="validarFecha()" required>
-                <hr>
-                <textarea name="mensaje" class="formulario__input" id="mensaje" name="mensaje" cols="100"
-                    rows="5"></textarea>
+                {% csrf_token %}
+                {{ form.as_p }}
                 <input type="submit" class="btn btn--contacto" value="Contactenos!"> 
             </div>
         </form>
