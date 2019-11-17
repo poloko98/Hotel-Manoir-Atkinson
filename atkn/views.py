@@ -9,7 +9,7 @@ def index(request):
         context = {'reservas': reservas}
         return render(request, 'atkn/lista_reservas.html',context )
     elif user.has_perm('atkn.administrador'):
-        return render(request, 'atkn/index.html', {'reservas':reservas})
+        return render(request, 'atkn/index.html', )
     else :
         return render(request, 'atkn/index.html', )
 
