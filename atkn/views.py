@@ -19,3 +19,9 @@ def contacto(request):
     else:
         form= ReservaForm()
     return render(request, 'atkn/contacto.html', {'form': form})
+
+
+def lista_reserva(request):
+    reservas= Reserva.objects.all()
+    context = {'reservas': reservas}
+    return render(request, 'atkn/lista_reservas.html',context)
