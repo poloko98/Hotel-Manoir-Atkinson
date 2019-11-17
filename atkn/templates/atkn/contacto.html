@@ -17,13 +17,12 @@
         <div class="container container--flex">
             <span class="icon-menu" id="btnmenu"></span>
             <ul class="menu" id="menu">
-                <li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Inicio</a></li>
+                <li class="menu__item"><a href="index.html" class="menu__link">Inicio</a></li>
                 <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
                 <li class="menu__item"><a href="habitaciones.html" class="menu__link">Habitaciones</a></li>
                 <li class="menu__item"><a href="servicios.html" class="menu__link">Servicios</a></li>
-                <li class="menu__item"><a href="{% url 'contacto' %}" class="menu__link">Contacto</a></li>
+                <li class="menu__item"><a href="contacto.html" class="menu__link  menu__link--select">Contacto</a></li>
                 <li class="menu__item"><a href="medioambiente.html" class="menu__link">Sustentabilidad</a></li>
-                
             </ul>
             <div class="social-icon">
                 <a href="" class="social-icon__link"><span class="icon-face"></span></a>
@@ -32,59 +31,28 @@
         </div>
     </nav>
     <!--Banner!-->
-    <div class="banner">
-        <img src="{% static 'img/img1.jpg' %}" alt="" class="banner_img">
-        <div class="banner__content">Vive una experiencia unica, en un grato ambiente familiar.</div>
-    </div>
+    <section class="banner">
+        <img src="img/img1.jpg" alt="" class="banner_img">
+        <div class="banner__content">Se me acabaron las ideas. AYUDA!</div>
+    </section>
     <!--Comienzo del main!-->
     <main class="main">
         <section class="group group--color">
             <div class="container">
-                <h2 class="main__title"> Bienvenidos al Hotel Atkinson</h2>
-                <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit non ullam quia
-                    repudiandae nam voluptatibus, quos pariatur doloribus consequatur molestias, eius libero
-                    necessitatibus ratione minus! Non pariatur, commodi porro rem!</p>
-                    
+                <h2 class="main__title">Rellena con tus datos!</h2>
+                <p class="main__text">Rellena los siguientes campos con los datos solicitados para contactarte con
+                    nosotros!</p>
             </div>
         </section>
-        
-       <!--Slider!-->
-       <div class="group slider">
-        <div class="tslider container container--flex">
-           <div class="prev button">
-               &#60;
-           </div>
-           <div class="next button">
-               &#62;
-           </div>
-           <img class="img__slider" name="auto" src="{% static 'img/slider1.jpg' %}" alt="slider 1"  >
-        </div>
-    </div>
-        <!--Seccion final!-->
-        <section class="group today-special">
-            <h2 class="group__title">Nuestras recomendaciones!</h2>
-            <div class="container container--flex">
-                <div class="column column--50-25">
-                    <img src="{% static 'img/img3.jpg' %}" alt="" class="today-special__img">
-                    <div class="today-special__title">Cuarto Número 1</div>
-                    <div class="today-special__price">$99</div>
-                </div>
-                <div class="column column--50-25">
-                    <img src="{% static 'img/img4.jpg' %}" alt="" class="today-special__img">
-                    <div class="today-special__title">Cuarto Número 2</div>
-                    <div class="today-special__price">$99</div>
-                </div>
-                <div class="column column--50-25">
-                    <img src="{% static 'img/img5.jpg' %}" alt="" class="today-special__img">
-                    <div class="today-special__title">Cuarto Número 3</div>
-                    <div class="today-special__price">$99</div>
-                </div>
-                <div class="column column--50-25">
-                    <img src="{% static 'img/img6.jpg' %}" alt="" class="today-special__img">
-                    <div class="today-special__title">Cuarto Número 4</div>
-                    <div class="today-special__price">$99</div>
-                </div>
+        <!--Formulario!-->
+        <section class="group group--color formulario">
+            <form action="" method="POST"  onsubmit="return validarForm();">
+            <div class="container">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn--contacto" value="Contactenos!"> 
             </div>
+        </form>
         </section>
     </main>
     <!--Footer!-->
@@ -110,8 +78,7 @@
             <p class="copy">2019 Hotel Atkinson Manior ! Todos los derechos resevados</p>
         </div>
     </footer>
-    <script src="{% static 'js/menu.js' %}"></script>
-    <script src="{% static 'js/carrousel.js' %}"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
