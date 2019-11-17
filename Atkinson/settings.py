@@ -122,10 +122,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-LOGIN_REDIRECT_URL = reverse_lazy('atkn:lista_reservas.html')
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'Reservas'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 'niconikofab@gmail.com'
+EMAIL_HOST_USER = 'niconikofab@gmail.com'
 EMAIL_HOST_PASSWORD = 'requisitos2018'
+EMAIL_PORT = 587
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
