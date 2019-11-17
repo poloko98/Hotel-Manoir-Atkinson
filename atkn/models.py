@@ -15,16 +15,13 @@ class Reserva(models.Model):
     def __str__(self):
         return self.fecha_inicio.__str__()+' / '+self.fecha_fin.__str__()+' '+self.nombre
 
-class Recepcionista(models.Model):
-    usuario = models.CharField(primary_key=True,max_length=20)
-    password = models.CharField(max_length=20)
-    nombre = models.CharField(max_length=50)
-    email = models.EmailField()
-    
     class Meta:
         permissions = (
             ('administrador',_('Es administrador')),
             ('recepcionista',_('Es recepcionista')),
         )
+
+
+   
 
 

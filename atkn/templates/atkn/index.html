@@ -23,6 +23,7 @@
                 <li class="menu__item"><a href="servicios.html" class="menu__link">Servicios</a></li>
                 <li class="menu__item"><a href="{% url 'contacto' %}" class="menu__link">Contacto</a></li>
                 <li class="menu__item"><a href="medioambiente.html" class="menu__link">Sustentabilidad</a></li>
+                {% if user. %}
             </ul>
             <div class="social-icon">
                 <a href="" class="social-icon__link"><span class="icon-face"></span></a>
@@ -43,12 +44,7 @@
                 <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit non ullam quia
                     repudiandae nam voluptatibus, quos pariatur doloribus consequatur molestias, eius libero
                     necessitatibus ratione minus! Non pariatur, commodi porro rem!</p>
-                    {% for Reserva in reservas %}
-                        <div>
-                            <p> publicado: {{ Reserva.email }}</p>
-                            
-                        </div> 
-                    {% endfor %}
+                    
             </div>
         </section>
         

@@ -3,8 +3,15 @@ from .models import Reserva
 from .forms import ReservaForm
 
 def index(request):
-    reservas = Reserva.objects.all()
-    return render(request, 'atkn/index.html', {'reservas':reservas})
+    user = request.user
+    if user.has_perm('atkn.recepcionista'):
+        reservas= Reserva.objects.all()
+        context = {'reservas': reservas}
+        return render(request, 'atkn/lista_reservas.html',context )
+    elif user.has_perm('atkn.administrador'):
+        return render(request, 'atkn/index.html', {'reservas':reservas})
+    else :
+        return render(request, 'atkn/index.html', )
 
 
 
