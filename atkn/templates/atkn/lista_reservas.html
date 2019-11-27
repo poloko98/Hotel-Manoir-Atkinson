@@ -1,46 +1,35 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Hotel Atkinson Manior</title>
-    <meta name="viewport"
-        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
-    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'js\bootstrap.min.js' %}">
-</head>
+{% extends 'atkn/base_admin.html' %}
 {% block content %}
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td>email</td>
-            <td>nombre </td>
-            <td>comentario</td>
-            <td>telefono </td>
-            <td>fecha_inicio </td>
-            <td>fecha_fin </td>
-            <td>num_personas </td>
-        </tr>
-    </thead>
-    <tbody>
-        {% if reservas %}
-        {% for reservas in reservas %}
-        <tr>
-            <td>{{reservas.email}}</td>
-            <td>{{reservas.nombre}}</td>
-            <td>{{reservas.comentario}}</td>
-            <td>{{reservas.telefono}}</td>
-            <td>{{reservas.fecha_inicio}}</td>
-            <td>{{reservas.fecha_fin}}</td>
-            <td>{{reservas.num_personas}}</td>
-        </tr>
-        {% endfor %}
-        {% else %}
-        <h1> no hay reservas</h1>
-        {% endif %}
-    </tbody>
-</table>
+<div class="table-responsive container">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <td>email</td>
+                <td>nombre </td>
+                <td>comentario</td>
+                <td>telefono </td>
+                <td>fecha de inicio </td>
+                <td>fecha de termino </td>
+                <td>numero de personas </td>
+            </tr>
+        </thead>
+        <tbody>
+            {% if reservas %}
+            {% for reservas in reservas %}
+            <tr>
+                <td>{{reservas.email}}</td>
+                <td>{{reservas.nombre}}</td>
+                <td>{{reservas.comentario}}</td>
+                <td>{{reservas.telefono}}</td>
+                <td>{{reservas.fecha_inicio}}</td>
+                <td>{{reservas.fecha_fin}}</td>
+                <td>{{reservas.num_personas}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <h1> no hay reservas</h1>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

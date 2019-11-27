@@ -14,6 +14,16 @@ def index(request):
         return render(request, 'atkn/index.html', )
 
 
+def menu_adm(request):
+    user = request.user
+    if user.has_perm('atkn.recepcionista'):
+        reservas= Reserva.objects.all()
+        context = {'reservas': reservas}
+        return render(request, 'atkn/menu_adm.html',context )
+    elif user.has_perm('atkn.administrador'):
+        return render(request, 'atkn/menu_adm.html', )
+    else :
+        return render(request, 'atkn/index.html', )
 
 
 
