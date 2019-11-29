@@ -2,9 +2,10 @@ from django.shortcuts import render
 from .models import Reserva
 from .forms import ReservaForm
 
-def index(request):
 
-   return render(request, 'atkn/index.html', )
+def index(request):
+    return render(request, 'atkn/index.html', )
+    
 
 
 def menu_adm(request):

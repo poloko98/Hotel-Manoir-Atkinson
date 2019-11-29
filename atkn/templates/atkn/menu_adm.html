@@ -1,22 +1,14 @@
 {% extends 'atkn/base_admin.html' %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-    <section class="group group--color">
-        <div class="container c__login">
-            <p>Ingresa tus credenciales!</p>
-            <div class="form-group">
-                <div class="formulario">
-                <input class="form-control" type="text" name = "username" placeholder="Ingrese usuario">
-                <input class="form-control" type="password" name = "password" placeholder="Ingrese contraseña">
-                </div>
-            </div>
-                <div class="form-group">
-                    <a href="#" class="badge badge-secondary">Olvide mi contraseña </a>
-                    <input class="btn btn--reserva" type="submit" value="Ingresar">
-                </div>
-        </div>
-    </section>
-    </form>
+<div class="container my-4">
+
+    
+
+    <a href="{% url 'Reservas' %}" class="btn btn-sq-lg btn-primary"> Listado de reservas </a>
+    <a href="" class="btn btn-sq-lg btn-primary"> Mantenedor </a>
+
+  
+
+  </div>
 {% endblock %}
