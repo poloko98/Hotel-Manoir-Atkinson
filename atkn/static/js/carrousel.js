@@ -1,4 +1,5 @@
-var imagenes = ['img/slider1.jpg', 'img/slider2.jpg', 'img/slider3.jpg', 'img/slider4.jpg'],
+
+var imagenes = ["{% static 'img/slider1.jpg'%}", "{% static 'img/slider2.jpg'%}", "{% static 'img/slider3.jpg'%}", "{% static 'img/slider4.jpg'%}"],
   cont = 0;
 
 function carrousel(tslider) {
@@ -12,7 +13,7 @@ function carrousel(tslider) {
         img.src = imagenes[cont-1];
         cont--;
       } else {
-        img.src = imagenes[imagenes.length - 1];
+        img.src = imagenes[imagenes.length - 1]
         cont = imagenes.length - 1;
       }
     } else if (tgt == next) {
@@ -20,7 +21,7 @@ function carrousel(tslider) {
         img.src = imagenes[cont + 1];
         cont++;
       } else {
-        img.src = imagenes[0];
+        img.src =  imagenes[0];
         cont = 0;
       }
     }

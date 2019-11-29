@@ -8,6 +8,9 @@ from django.contrib.auth import views as auth_views
 from rest_framework import routers
 from atkn.quickstart import views as wiw
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 router = routers.DefaultRouter()
 router.register(r'users', wiw.UserViewSet)
@@ -15,7 +18,6 @@ router.register(r'reservas', wiw.ReservaViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
-
 
 urlpatterns = [
     path(r'', views.index, name='index'),
@@ -31,4 +33,4 @@ urlpatterns = [
     path(r'menu_adm/', views.menu_adm, name='Menu Administrador'),
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

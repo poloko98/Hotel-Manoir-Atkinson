@@ -22,6 +22,12 @@ class Reserva(models.Model):
         )
 
 
+class Image(models.Model):
+    nombre= models.CharField(max_length=500)
+    foto= models.ImageField(upload_to='images/', null=True, verbose_name="")
+
+    def __str__(self):
+        return self.nombre + ": " + str(self.foto)
    
 
 
