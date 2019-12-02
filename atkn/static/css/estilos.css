@@ -117,6 +117,7 @@ h6 {
 
 .menu__link:hover {
     background: rgba(82, 20, 100);
+    text-decoration: none;
 }
 
 .menu__link--select {

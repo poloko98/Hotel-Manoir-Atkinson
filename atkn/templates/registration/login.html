@@ -1,28 +1,22 @@
-{% load staticfiles %}
-<head>
-        <meta charset="UTF-8">
-        <title>Hotel Atkinson Manior</title>
-        <meta name="viewport"
-            content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
-        <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
-        <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'js\bootstrap.min.js' %}">
-    </head>
+{% extends 'atkn/base.html' %}
 {% block content%}
 <form method="post">
-        {% csrf_token %}
-        <div class="row">
-            <div class="form-group">
-                <input class="form-control" type="text" name = "username">
-            </div>
+        
+    <section class="group group--color">
+        <div class="container c__login">
+            <p>Ingresa tus credenciales!</p>
+            {% csrf_token %}
+            <table class="form-group">
+                
+                {{form.as_table}}
+                
+            </table>
+                <div class="form-group">
+                    <input class="btn btn--reserva" type="submit" value="Ingresar">
+                    <br>
+                    <a href="{% url 'password_reset' %}" class="badge badge-secondary">Olvide mi contraseña </a>
+                </div>
         </div>
-        <input class="form-control" type="password" name = "password">
-        <div class="row">
-            <div class="form-group">
-                <a href="#">Olvide mi contraseña </a>
-                <input class="btn btn-primary" type="submit" value="Ingresar">
-            </div>
-        </div>
+    </section>
 </form>
 {% endblock %}

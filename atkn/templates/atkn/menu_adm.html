@@ -1,0 +1,21 @@
+{% extends 'atkn/base_admin.html' %}
+
+{% block content %}
+<div class="container my-4">
+
+  <div class="row no-gutters">
+    <div class="d-flex">
+      <div class="content align-self-center">
+          <div class="container-fluid">
+              <h1 class="display-4 mb-4"><span class="font-weight-bold ">Bienvenido/a {{user.username}}</span>!</h1>
+              <p class="lead mb-5">En su menu podra ver las opciones y caracteristicas para obtener informacion o recuperar la contraseña de algun cliente o funcionario.</p>
+              <p>En caso que desee ingresar al mantenedor, debera ingresar a través de la direccion especifica de la API /reservas/.</p>
+
+          </div>
+      </div>
+    </div>
+
+  
+
+  </div>
+{% endblock %}
