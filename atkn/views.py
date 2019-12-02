@@ -15,8 +15,6 @@ def menu_adm(request):
         reservas= Reserva.objects.all()
         context = {'reservas': reservas}
         return render(request, 'atkn/menu_adm.html',context )
-    elif user.has_perm('atkn.administrador'):
-        return render(request, 'atkn/menu_adm.html', )
     else :
         return render(request, 'atkn/index.html', )
 
